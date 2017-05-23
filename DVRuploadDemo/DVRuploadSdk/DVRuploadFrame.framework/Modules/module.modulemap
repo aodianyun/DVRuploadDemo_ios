@@ -1,0 +1,6 @@
+framework module DVRuploadFrame {
+  umbrella header "DVRuploadFrame.h"
+
+  export *
+  module * { export * }
+}

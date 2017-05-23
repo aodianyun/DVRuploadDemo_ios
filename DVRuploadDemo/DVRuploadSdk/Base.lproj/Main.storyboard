@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euU-hy-tKl">
+                                <rect key="frame" x="138" y="617" width="79" height="30"/>
+                                <state key="normal" title="选择上传"/>
+                                <connections>
+                                    <action selector="onSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RjF-ma-gUx"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3el-Q3-QRl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="581"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vT1-6P-ody"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iwL-Ms-0JA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="euU-hy-tKl" firstAttribute="top" secondItem="3el-Q3-QRl" secondAttribute="bottom" constant="8" id="3VF-2D-p9M"/>
+                            <constraint firstItem="euU-hy-tKl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="9vc-VE-Mvf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="euU-hy-tKl" secondAttribute="trailing" constant="142" id="A1k-1d-YuA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="euU-hy-tKl" secondAttribute="bottom" constant="20" id="La1-8T-pka"/>
+                            <constraint firstItem="euU-hy-tKl" firstAttribute="top" secondItem="3el-Q3-QRl" secondAttribute="bottom" constant="8" id="QJx-oH-tu7"/>
+                            <constraint firstItem="3el-Q3-QRl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="axA-uX-kBC"/>
+                            <constraint firstAttribute="trailing" secondItem="3el-Q3-QRl" secondAttribute="trailing" id="gHd-02-IzJ"/>
+                            <constraint firstItem="3el-Q3-QRl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i40-Us-mgn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="3el-Q3-QRl" id="xBe-X4-q3z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
