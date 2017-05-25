@@ -46,8 +46,8 @@
         account.access_id  = @"125444393563";
         account.access_key = @"LM1N4aZ5aDCLa325D5ineenhynqtK6g5";
         UploadManager *up = [[UploadManager alloc] initWithPath:[_valueDict objectForKey:@"path"] AndAccount:account];
-        [up upload:^(float process, int err) {
-            NSLog(@"process:%f, err:%d",process, err);
+        [up upload:^(float process, int err, NSString *finishUrl) {
+            NSLog(@"process:%f, err:%d,finishurl:%@",process, err, finishUrl);
             [_upProgress setProgress:process];
         }];
     }

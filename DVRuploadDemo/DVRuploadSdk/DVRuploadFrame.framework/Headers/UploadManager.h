@@ -21,7 +21,7 @@
 
 -(instancetype)initWithPath:(NSString *)filePath AndAccount:(Account *)account;
 
--(void)upload:(void(^)(float process,int err)) upBlock;
+-(void)upload:(void(^)(float process, int err, NSString *finishUrl)) upBlock;
 
 -(void)pause;
 
